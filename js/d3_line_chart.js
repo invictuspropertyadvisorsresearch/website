@@ -79,7 +79,7 @@ allNTA_rev = swap(allNTA)
       $ntaDropdown.dropdown('refresh');
         
       dataset=$datasetDropdown.dropdown("get value");
-      
+      console.log(dataset)
       selectedNTAs = $("#neighborhoodDropdown").dropdown("get value") 
       // selectedNTAs = selectedNTAs.slice(0,5)
   
@@ -104,8 +104,8 @@ allNTA_rev = swap(allNTA)
       }
       // console.log(sqlD3);
       var complaintTypes = {};
-      // console.log('This SQL query is data for the line chart')
-      // console.log(sqlD3);
+      console.log('This SQL query is data for the line chart')
+      console.log(sqlD3);
       
       d3v3.json(sqlD3,
       

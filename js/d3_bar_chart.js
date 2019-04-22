@@ -149,8 +149,8 @@ function updateBarChart() {
 			query = base + `SELECT a.value as var, a.ntacode, b.ntaname, year FROM nta_acs_age_sex as a, "wxu-carto".nynta_4326 as b WHERE a.variable = 'total_population' AND a.year = (select max(year) from ${dataset}) AND a.ntacode = b.ntacode`
 		 }
 
-		// console.log('BAR CHART DATA QUERY:')
-		// console.log(query)
+		console.log('BAR CHART DATA QUERY:')
+		console.log(query)
 		d3.json(query, function(error, data){
 			// debugger
 			data = data.rows
